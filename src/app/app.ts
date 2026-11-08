@@ -1,9 +1,10 @@
 import { AsyncPipe, JsonPipe } from '@angular/common';
 import { Component, computed, effect, linkedSignal, signal, WritableSignal } from '@angular/core';
+import { Cartly } from './components/cartly/cartly';
 // import { delay, of } from 'rxjs';
 
 @Component({
-  imports: [AsyncPipe , JsonPipe],
+  imports: [AsyncPipe, JsonPipe, Cartly],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',

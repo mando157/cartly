@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'bootstrap/scss/bootstrap.scss';
+@use '@fortawesome/fontawesome-free/css/all.min.css';
+
+
+:root,
+[data-theme="light"] {
+    color-scheme: light;
+
+    --body-bg: #FFFFFF;
+    --surface-bg: #F8F9FA;
+    --card-bg: #FFFFFF;
+
+    --text-color: #212529;
+    --muted-color: #6C757D;
+
+    --primary-color: #FF7900;
+    --primary-hover: #E66D00;
+    --primary-soft: #FFF0E3;
+
+    --border-color: #DEE2E6;
+
+    --danger-color: #DC3545;
+    --success-color: #198754;
+
+    --summary-bg: #FFF0E3;
+    --summary-text: #212529;
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+
+    --body-bg: #17191D;
+    --surface-bg: #212529;
+    --card-bg: #25292F;
+
+    --text-color: #F8F9FA;
+    --muted-color: #ADB5BD;
+
+    --primary-color: #FF8A1F;
+    --primary-hover: #FFA347;
+    --primary-soft: #342417;
+
+    --border-color: #343A40;
+
+    --danger-color: #EF5350;
+    --success-color: #20C997;
+
+    --summary-bg: #342417;
+    --summary-text: #FFFFFF;
+}
+
+body {
+    background-color: var(--body-bg);
+}
