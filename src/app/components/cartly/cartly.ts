@@ -36,8 +36,10 @@ export class Cartly implements AfterViewInit {
 
       direction: 'horizontal',
       loop: true,
+      loopAdditionalSlides: 4,
 
-      slidesPerView: 4,
+      slidesPerView: 1,
+      centeredSlides: true,
       spaceBetween: 25,
 
       speed: 8000,
@@ -55,37 +57,24 @@ export class Cartly implements AfterViewInit {
       },
 
       breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 25,
-        },
         480: {
-          slidesPerView: 2,
-          spaceBetween: 20
+          slidesPerView: 1.5,
+          spaceBetween: 20,
         },
         768: {
           slidesPerView: 2,
-          spaceBetween: 25
+          spaceBetween: 25,
         },
         1024: {
-          slidesPerView: 4,
-          spaceBetween: 25
+          slidesPerView: 3,
+          spaceBetween: 25,
         }
-      },
-
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
       },
 
       preventClicks: false,
       preventClicksPropagation: false,
     });
+
   }
 
   public totalItems = computed(() => {

@@ -25,37 +25,56 @@
                 <h4>Total Price</h4><span>{{(totalPrice() == null) ? "0" : totalPrice()}}$</span>
             </div>
         </div>
+
         <div class="swiper mb-5">
             <div class="swiper-wrapper">
-                @for (product of products(); track $index) {
+                @for (product of products(); track product.id) {
                 <div class="swiper-slide">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <div class="image">
                             <img [src]="product.image" class="card-img-top" alt="product">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">{{product.name}}</h5>
-                            <p class="card-text">{{product.description}}</p>
-
+                            <h5 class="card-title">
+                                {{ product.name }}
+                            </h5>
+                            <p class="card-text">
+                                {{ product.description }}
+                            </p>
                             <ul class="m-0 p-0 list-unstyled">
-                                <li id="Price">Price : <span>{{product.price}}$</span></li>
-                                <li id="Quantity">Quantity : <span>{{product.quantity}}</span></li>
-                                <li id="Subtotal">Subtotal : <span>{{(product.quantity * product.price)}}$</span></li>
+                                <li id="Price">
+                                    Price :
+                                    <span>{{ product.price }}$</span>
+                                </li>
+                                <li id="Quantity">
+                                    Quantity :
+                                    <span>{{ product.quantity }}</span>
+                                </li>
+                                <li id="Subtotal">
+                                    Subtotal :
+                                    <span>
+                                        {{ product.quantity * product.price }}$
+                                    </span>
+                                </li>
                             </ul>
-
                             <div class="buttons">
-                                <button class="btn btn-primary" (click)="addProduct(product.id)">Add</button>
-                                <button class="btn btn-danger" (click)="removeProduct(product.id)">Remove</button>
+                                <button class="btn btn-primary" (click)="addProduct(product.id)">
+                                    Add
+                                </button>
+                                <button class="btn btn-danger" (click)="removeProduct(product.id)">
+                                    Remove
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
                 }
             </div>
-
-            <!-- <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div> -->
-
+            <!-- Navigation (Optional) -->
+            <!--
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    -->
         </div>
     </div>
 </div>

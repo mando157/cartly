@@ -126,17 +126,18 @@ nav.navbar {
         color: var(--text-color);
         border-radius: 5px;
 
-        &.total-price{
+        &.total-price {
             background-color: var(--success-color);
             color: #fff;
         }
 
-        span{
+        span {
             font-weight: 500;
             font-size: 18px;
         }
     }
 }
+
 
 .swiper {
     overflow: hidden;
@@ -154,91 +155,94 @@ nav.navbar {
             transparent);
 
     .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+
+    .swiper-slide {
         display: flex;
+        justify-content: center;
+        height: auto;
 
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
+        .card {
+            width: 18rem;
+            max-width: 100%;
 
-            .card {
-                background-color: var(--card-bg);
-                color: var(--text-color);
+            background-color: var(--card-bg);
+            color: var(--text-color);
 
-                >img {
-                    width: 150px;
-                    margin: auto;
+            >img {
+                width: 150px;
+                margin: auto;
+            }
+
+            .card-title {
+                color: var(--primary-color);
+                font-size: 30px;
+                font-weight: 700;
+                text-transform: capitalize;
+            }
+
+            #Quantity,
+            #Price,
+            #Subtotal {
+                font-size: 18px;
+                font-weight: 500;
+
+                span {
+                    color: var(--success-color);
                 }
+            }
 
-                .card-title{
-                    color: var(--primary-color);
-                    font-size: 30px;
-                    font-weight: 700;
-                    text-transform: capitalize;
+            #Quantity {
+                display: flex;
+                gap: 10px;
 
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: 25px;
+                    height: 25px;
+
+                    background-color: var(--primary-color);
+                    color: #000;
+                    border-radius: 50%;
                 }
+            }
 
-                #Quantity,
-                #Price,
-                #Subtotal{
-                    font-size: 18px;
-                    font-weight: 500;
+            .buttons {
+                display: flex;
+                gap: 15px;
+                margin-top: 10px;
 
-                    span{
-                        color: var(--success-color);
+                button {
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        transform: skewX(10deg);
                     }
                 }
 
-                #Quantity{
-                    display: flex;
-                    gap: 10px;
+                button:nth-of-type(1) {
+                    background-color: var(--primary-color);
+                    border-color: var(--primary-color);
 
-                    span{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        width: 25px;
-                        height: 25px;
-                        background-color: var(--primary-color);
+                    &:hover {
                         color: #000;
-                        border-radius: 50%;
-
+                        background-color: var(--primary-hover);
+                        border-color: var(--primary-hover);
+                        box-shadow: 0 0 12px 5px var(--primary-hover);
                     }
                 }
 
-                .buttons {
-                    display: flex;
-                    gap: 15px;
-                    margin-top: 10px;
+                button:nth-of-type(2) {
+                    background-color: var(--danger-color);
+                    border-color: var(--danger-color);
 
-                    button{
-                        transition: all .3s ease-in-out;
-
-                        &:hover{
-                            transform: skewX(10deg);
-                        }
-                    }
-
-                    button:nth-of-type(1) {
-                        background-color: var(--primary-color);
-                        border-color: var(--primary-color);
-
-                        &:hover {
-                            color: #000;
-                            background-color: var(--primary-hover);
-                            border-color: var(--primary-hover);
-                            box-shadow: 0px 0px 12px 5px var(--primary-hover);
-                        }
-                    }
-
-                    button:nth-of-type(2) {
-                        background-color: var(--danger-color);
-                        border-color: var(--danger-color);
-
-                        &:hover {
-                            box-shadow: 0px 0px 12px 5px var(--danger-color);
-                            color: #000;
-                        }
+                    &:hover {
+                        box-shadow: 0 0 12px 5px var(--danger-color);
+                        color: #000;
                     }
                 }
             }
