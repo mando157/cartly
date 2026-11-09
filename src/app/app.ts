@@ -4,7 +4,7 @@ import { Cartly } from './components/cartly/cartly';
 // import { delay, of } from 'rxjs';
 
 @Component({
-  imports: [AsyncPipe, JsonPipe, Cartly],
+  imports: [Cartly],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
