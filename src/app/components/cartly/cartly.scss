@@ -139,6 +139,8 @@ nav.navbar {
 }
 
 .swiper {
+    overflow: hidden;
+
     -webkit-mask-image: linear-gradient(to right,
             transparent,
             black 8%,
@@ -153,6 +155,7 @@ nav.navbar {
 
     .swiper-wrapper {
         // transition-timing-function: linear;
+        display: flex;
 
         .swiper-slide {
             display: flex;
