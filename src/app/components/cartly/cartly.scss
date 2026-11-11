@@ -156,6 +156,9 @@ nav.navbar {
 
     .swiper-wrapper {
         transition-timing-function: linear !important;
+        display: flex;
+        box-sizing: content-box;
+        transition-property: transform;
     }
 
     .swiper-slide {

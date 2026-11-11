@@ -61,7 +61,7 @@
                                 <button class="btn btn-primary" (click)="addProduct(product.id)">
                                     Add
                                 </button>
-                                <button class="btn btn-danger" (click)="removeProduct(product.id)">
+                                <button class="btn btn-danger" [ngClass]="(product.quantity == 0) ? 'd-none' : ''" (click)="removeProduct(product.id)">
                                     Remove
                                 </button>
                             </div>

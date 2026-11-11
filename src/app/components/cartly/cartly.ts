@@ -2,9 +2,7 @@ import { Component, AfterViewInit, signal, computed } from '@angular/core';
 import Swiper from 'swiper';
 import { Autoplay, FreeMode, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { NgClass } from '@angular/common';
 
 type product = {
   id: number,
@@ -16,7 +14,7 @@ type product = {
 }
 
 @Component({
-  imports: [],
+  imports: [NgClass],
   selector: 'app-cartly',
   styleUrl: './cartly.scss',
   templateUrl: './cartly.html',
